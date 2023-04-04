@@ -1,6 +1,28 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@vueuse/nuxt', '@nuxtjs/tailwindcss', 'nuxt-icon'],
+	modules: [
+		'@nuxt/image-edge',
+		'@vueuse/nuxt',
+		'@nuxtjs/tailwindcss',
+		'nuxt-icon',
+		'@nuxtjs/color-mode',
+	],
+	image: {
+		provider: 'storyblok',
+		storyblok: {
+			baseURL: 'https://a.storyblok.com',
+		},
+	},
+	colorMode: {
+		classSuffix: '',
+	},
+	tailwindcss: {
+		cssPath: '~/assets/css/tailwind.css',
+		configPath: 'tailwind.config.js',
+		exposeConfig: false,
+		injectPosition: 0,
+		viewer: true,
+	},
 	app: {
 		head: {
 			link: [

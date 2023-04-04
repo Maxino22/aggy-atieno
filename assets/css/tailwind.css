@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hambuger Menu */
+.hamburger {
+	cursor: pointer;
+	width: 28px;
+	height: 28px;
+	margin-top: 7px;
+	transition: all 0.25s;
+	position: relative;
+}
+
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
@@ -10,7 +20,6 @@
 	height: 2px;
 	top: 0;
 	left: 0;
-	background: #333;
 	transform: rotate(0);
 	transition: all 0.5s;
 }
@@ -28,6 +37,7 @@
 
 .open .hamburger-top {
 	transform: rotate(45deg) translateY(6px) translateX(6px);
+	background-color: #fff;
 }
 
 .open .hamburger-middle {
@@ -36,4 +46,5 @@
 
 .open .hamburger-bottom {
 	transform: rotate(-45deg) translateY(6px) translateX(-6px);
+	background-color: #fff;
 }

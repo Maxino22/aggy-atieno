@@ -1,10 +1,8 @@
 <template>
-	<div>
+	<div class="bg-white h-screen dark:bg-black">
 		<UiTheHeader />
 		<slot />
 	</div>
 </template>
-
-<script setup></script>
 
 <style lang="scss" scoped></style>
